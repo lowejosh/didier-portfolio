@@ -345,16 +345,32 @@ p {
 }
 
 .work-item {
-    background: #fff;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Additional styling for photo-based projects */
+.work-item-photo {
+    background: #fff;
+}
+
+.work-item-photo:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Clean styling for logo/brand-based projects */
+.work-item-logo {
+    background: #fff;
+}
+
+.work-item-logo:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .work-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .work-link {
@@ -500,6 +516,14 @@ p {
     max-width: 100%;
     height: auto;
     max-height: 400px;
+}
+
+.about-profile-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    border-radius: 20px;
+    object-fit: cover;
 }
 
 /* Testimonials Section */
