@@ -792,19 +792,7 @@ p {
     }
 }
 
-/* Loading Animation - smoother and less aggressive */
-.fade-in {
-    opacity: 0;
-    transform: translateY(15px);
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+/* Fade animations removed to prevent flickering */
 
 /* Smooth Scrolling Enhancements */
 @media (prefers-reduced-motion: no-preference) {

@@ -1,18 +1,16 @@
-// Modern Portfolio JavaScript - Enhanced Interactions and Animations
+// Modern Portfolio JavaScript - Optimized for Performance
 
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize all functionality
   initNavigation();
-  initScrollAnimations();
   initSmoothScrolling();
-  initParallaxEffects();
   initTypingAnimation();
   initWorkFilters();
   initLazyLoading();
   initContactForm();
 });
 
-// Navigation functionality
+// Navigation functionality - optimized with throttling
 function initNavigation() {
   const nav = document.getElementById("nav-main");
   const navToggle = document.getElementById("nav-toggle");
@@ -41,9 +39,11 @@ function initNavigation() {
     });
   });
 
-  // Navbar scroll effect
+  // Throttled scroll handler to prevent excessive repainting
+  let ticking = false;
   let lastScrollTop = 0;
-  window.addEventListener("scroll", function () {
+
+  function updateNav() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     // Add/remove scrolled class for styling
@@ -53,21 +53,16 @@ function initNavigation() {
       nav.classList.remove("nav-scrolled");
     }
 
-    // Hide/show navbar on scroll
+    // Hide/show navbar on scroll (simplified)
     if (scrollTop > lastScrollTop && scrollTop > 100) {
       nav.style.transform = "translateY(-100%)";
     } else {
       nav.style.transform = "translateY(0)";
     }
 
-    lastScrollTop = scrollTop;
-  });
-
-  // Active section highlighting
-  const sections = document.querySelectorAll("section[id]");
-
-  window.addEventListener("scroll", function () {
-    const scrollPosition = window.scrollY + 100;
+    // Active section highlighting (simplified)
+    const sections = document.querySelectorAll("section[id]");
+    const scrollPosition = scrollTop + 150;
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
@@ -87,50 +82,20 @@ function initNavigation() {
         }
       }
     });
+
+    lastScrollTop = scrollTop;
+    ticking = false;
+  }
+
+  window.addEventListener("scroll", function () {
+    if (!ticking) {
+      requestAnimationFrame(updateNav);
+      ticking = true;
+    }
   });
 }
 
-// Scroll animations with Intersection Observer - optimized to prevent flickering
-function initScrollAnimations() {
-  const observerOptions = {
-    threshold: 0.15,
-    rootMargin: "0px 0px -30px 0px",
-  };
-
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("fade-in");
-
-        // Special animations for different elements with reduced delays
-        if (entry.target.classList.contains("work-item")) {
-          // Reduced stagger for work items
-          const delay =
-            Array.from(entry.target.parentNode.children).indexOf(entry.target) *
-            50;
-          entry.target.style.animationDelay = `${delay}ms`;
-        }
-
-        if (entry.target.classList.contains("testimonial-card")) {
-          // Reduced stagger for testimonial cards
-          const delay =
-            Array.from(entry.target.parentNode.children).indexOf(entry.target) *
-            75;
-          entry.target.style.animationDelay = `${delay}ms`;
-        }
-
-        // Unobserve to prevent re-triggering
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  // Observe elements for animation
-  const animatedElements = document.querySelectorAll(
-    ".work-item, .testimonial-card, .about-content, .contact-info, .section-header"
-  );
-  animatedElements.forEach((el) => observer.observe(el));
-}
+// Scroll animations removed to prevent flickering
 
 // Smooth scrolling for anchor links
 function initSmoothScrolling() {
@@ -156,29 +121,7 @@ function initSmoothScrolling() {
   });
 }
 
-// Parallax effects for hero section
-function initParallaxEffects() {
-  const heroVisual = document.querySelector(".hero-visual");
-  const heroContent = document.querySelector(".hero-content");
-
-  if (heroVisual && heroContent) {
-    window.addEventListener("scroll", function () {
-      const scrolled = window.pageYOffset;
-      const parallaxSpeed = 0.5;
-
-      if (scrolled < window.innerHeight) {
-        heroVisual.style.transform = `translateY(${
-          scrolled * parallaxSpeed
-        }px)`;
-        heroContent.style.transform = `translateY(${
-          scrolled * parallaxSpeed * 0.3
-        }px)`;
-      }
-    });
-  }
-}
-
-// Typing animation for hero title
+// Typing animation for hero title - simplified
 function initTypingAnimation() {
   const heroTitle = document.querySelector(".hero-title");
 
@@ -187,13 +130,13 @@ function initTypingAnimation() {
 
     lines.forEach((line, index) => {
       line.style.opacity = "0";
-      line.style.transform = "translateY(30px)";
+      line.style.transform = "translateY(20px)";
 
       setTimeout(() => {
-        line.style.transition = "all 0.8s ease";
+        line.style.transition = "opacity 0.6s ease, transform 0.6s ease";
         line.style.opacity = "1";
         line.style.transform = "translateY(0)";
-      }, index * 300 + 500);
+      }, index * 200 + 300);
     });
   }
 }
