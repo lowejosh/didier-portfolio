@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaia Display - Didier Jourdain</title>
-    <meta name="description" content="Gaia Display - An expressive font that sits harmoniously between Modern and Humanist serif, designed for a vegan cafe franchise.">
+    <title>Azuri Handmade - Didier Jourdain</title>
+    <meta name="description" content="Azuri Handmade - Jewelry brand identity embodying craftsmanship, storytelling, and nomadic spirit for handcrafted intuitive jewelry.">
     
     <!-- Fonts -->
     <script src="https://use.typekit.net/nzr5sic.js" type="text/javascript"></script>
@@ -15,6 +15,13 @@
     
 </head>
 <body>
+    <!-- Back to Portfolio Button -->
+    <button class="back-to-portfolio" onclick="window.history.back();" aria-label="Back to portfolio">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+        </svg>
+    </button>
+
     <!-- Navigation -->
     <nav class="nav-main" id="nav-main">
         <div class="nav-container">
@@ -41,27 +48,19 @@
         </div>
     </nav>
 
-    <!-- Project Navigation -->
-    <div class="project-nav">
-        <div class="project-nav-content">
-            <a href="new-index.html#work" class="back-link">← Back to Portfolio</a>
-            <span class="project-title-small">Gaia Display</span>
-        </div>
-    </div>
-
     <!-- Project Hero -->
     <section class="project-hero">
         <div class="project-hero-grid">
             <div class="project-hero-content">
-                <h1>Gaia Display</h1>
+                <h1>Azuri Handmade</h1>
                 <p>
-                    An expressive font that sits harmoniously between Modern and Humanist serif. Designed for a local vegan cafe looking to expand into a franchise, reflecting their values of quality plant-based foods and natural beauty.
+                    Jewelry brand identity embodying craftsmanship, storytelling, and nomadic spirit. A startup small business creating handcrafted intuitive jewelry with deep meaning and connection.
                 </p>
                 
                 <div class="project-meta">
                     <div class="meta-item">
                         <span class="meta-label">Category</span>
-                        <span class="meta-value">Typography & Design</span>
+                        <span class="meta-value">Branding & Identity</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Year</span>
@@ -69,7 +68,7 @@
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Type</span>
-                        <span class="meta-value">Commercial Project</span>
+                        <span class="meta-value">Startup Branding</span>
                     </div>
                 </div>
                 
@@ -77,94 +76,112 @@
             </div>
             
             <div class="project-hero-image">
-                <img src="images/Gaia-tile-combined.svg" alt="Gaia Display Typography" loading="lazy">
+                <img src="images/Azuri-Tile.svg" alt="Azuri Handmade Brand Identity" loading="lazy">
             </div>
         </div>
     </section>
 
-    <!-- Project Background -->
+    <!-- Brand Banner -->
+    <section class="project-section">
+        <div class="container">
+            <div class="project-image">
+                <img src="images/Azuri-Banner.svg" alt="Azuri Handmade Brand Banner" loading="lazy" class="full-width-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Brandmark -->
     <section id="project-details" class="project-section">
         <div class="container">
             <div class="project-grid">
                 <div class="project-text">
-                    <h2>Design Intent: Nature Is Beautiful</h2>
+                    <h2>Brandmark Philosophy</h2>
                     <p>
-                        A local vegan/vegetarian cafe is becoming increasingly popular and looking to expand its business into a franchise. They wanted a font face that would suit their business - a decorative font designed for large scale advertising.
+                        Azuri's mission is to show us all what it is to be human. The wordmark is designed to evoke a feeling of wonder, connection, and unity, offering a reminder that humans are not separate from the universe but are a direct manifestation of its consciousness.
                     </p>
                     <p>
-                        The client specified a detailed font that reflects the brand's identity and values of quality plant-based foods. The intent was based on the proposition that "Nature Is Beautiful."
-                    </p>
-                    <p>
-                        To accomplish this, I created a serif that sits between a Humanist serif and a Modern serif. The beauty comes from the Modern serif and the natural element from the Humanist serif.
+                        In essence, this logo serves as a symbolic reflection of the idea that we are the universe becoming aware of itself—a visual invitation to contemplate our place in the grand expanse of existence.
                     </p>
                 </div>
                 
                 <div class="project-image">
-                    <img src="images/BLOOM_1.png" alt="Gaia Display in Nature Context" loading="lazy">
+                    <img src="images/Azuri-Logo-iterations.svg" alt="Azuri Logo Design Iterations" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Typography Details -->
-    <section class="project-section">
-        <div class="container">
-            <div class="project-image">
-                <img src="images/GAIA-Letterforms-corrected.svg" alt="Gaia Display Letterforms" loading="lazy" class="full-width-image">
-            </div>
-        </div>
-    </section>
-
-    <!-- Application -->
+    <!-- Logo & Colors -->
     <section class="project-section">
         <div class="container">
             <div class="project-grid reverse">
                 <div class="project-text">
-                    <h2>Real-World Application</h2>
+                    <h2>Colors & Applications</h2>
                     <p>
-                        The typeface was designed specifically for large-scale advertising applications. Here you can see how Gaia Display performs in a real cafe signage context, demonstrating its readability and visual impact.
+                        As the product is an intuitive process, the color scheme reflects that by having many different colors, too many to showcase. The only defining factor for the color palette is that they need to be pastel colors.
                     </p>
                     <p>
-                        The high contrast and unique character shapes make it perfect for brand recognition while maintaining the organic, natural feeling that aligns with the vegan cafe's values.
+                        This way there is a loose theme and feeling between the brand and the colors. Pastel colors also have a handmade and earthy feel to them, further reflecting the brand's artisanal nature and connection to natural materials.
                     </p>
                 </div>
                 
                 <div class="project-image">
-                    <img src="images/Coffee-Sign-Mockup.jpg" alt="Gaia Display Cafe Sign Mockup" loading="lazy">
+                    <img src="images/Azuri-Logo-and-colours.svg" alt="Azuri Logo and Color Palette" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Character Analysis -->
+    <!-- Minimalist Logo -->
     <section class="project-section">
         <div class="container">
             <div class="project-grid">
                 <div class="project-text">
-                    <h2>Her Character</h2>
+                    <h2>Simplified Applications</h2>
                     <p>
-                        Designed to be a caricature of nature, Gaia Display is an expressive font that sits harmoniously between a Modern and Humanist serif. Her high contrast, as well as a high angle of stress, allow this font to stand in a class of her own.
-                    </p>
-                    <p>
-                        She has beautiful curves along the stems which defy the structured appearance of most typefaces, transitioning nicely into the serifs. The vegan cafe funding this endeavor was happy to see how their new typeface turned out.
-                    </p>
-                    <p>
-                        This will help them grow freely and beautifully as nature intended.
+                        For smaller applications and digital use, a simplified version of the logo was created. This maintains the brand's essence while ensuring readability and impact across all touchpoints.
                     </p>
                 </div>
                 
                 <div class="project-image">
-                    <img src="images/ANATOMY.svg" alt="Gaia Display Typography Anatomy" loading="lazy">
+                    <img src="images/Azuri-min.svg" alt="Azuri Minimalist Logo" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final Typography -->
+    <!-- Thank You Card -->
     <section class="project-section">
         <div class="container">
+            <div class="project-grid reverse">
+                <div class="project-text">
+                    <h2>Thank You Card Design</h2>
+                    <p>
+                        This design was chosen to sit on the back of the thank you card. The card represents the personal touch and craftsmanship that Azuri brings to every piece of jewelry.
+                    </p>
+                    <p>
+                        Each card accompanies handmade jewelry pieces, creating a meaningful connection between the artisan and the customer, reinforcing the brand's values of storytelling and human connection.
+                    </p>
+                </div>
+                
+                <div class="project-image">
+                    <img src="images/Azury-card.svg" alt="Azuri Thank You Card Design" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Graphic Assets -->
+    <section class="project-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2>Graphic Assets</h2>
+                <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">
+                    A comprehensive suite of graphic elements was developed to support the brand across various applications and communications.
+                </p>
+            </div>
             <div class="project-image">
-                <img src="images/Beauty.svg" alt="Gaia Display Beauty" loading="lazy" class="full-width-image">
+                <img src="images/Azuri-graphics-banner.svg" alt="Azuri Graphic Assets" loading="lazy" class="full-width-image">
             </div>
         </div>
     </section>
@@ -172,9 +189,9 @@
     <!-- Project CTA -->
     <section class="project-cta">
         <div class="container">
-            <h2>Need Custom Typography?</h2>
-            <p>Let's create a unique typeface that perfectly represents your brand</p>
-            <a href="mailto:djourdain44@gmail.com?subject=Typography%20Project%20Inquiry" class="btn contact-button-modern">Start a Project</a>
+            <h2>Ready to Build Your Brand Story?</h2>
+            <p>Let's create a meaningful identity that connects with your audience on a deeper level</p>
+            <a href="mailto:djourdain44@gmail.com?subject=Brand%20Identity%20Project%20Inquiry" class="btn contact-button-modern">Start a Project</a>
         </div>
     </section>
 
@@ -185,8 +202,8 @@
                 <h2>More Projects</h2>
                 <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
                     <a href="spir-handmade-modern.html" class="btn btn-outline">SPIR Handmade</a>
+                    <a href="gaia-display-modern.html" class="btn btn-outline">Gaia Display</a>
                     <a href="lionheart-modern.html" class="btn btn-outline">Lionheart</a>
-                    <a href="azuri-handmade-modern.html" class="btn btn-outline">Azuri Handmade</a>
                     <a href="new-index.html#work" class="btn btn-primary">All Projects</a>
                 </div>
             </div>

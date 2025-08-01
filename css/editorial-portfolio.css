@@ -4,16 +4,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-  /* Editorial Color Palette - Cream tones with sophisticated contrast */
-  --cream-base: #faf7f2;
-  --cream-dark: #f5f1e8;
-  --warm-white: #fefcf9;
+  /* Editorial Color Palette - Enhanced Cream tones with sophisticated contrast */
+  --cream-base: #f9f6f0;
+  --cream-dark: #f2ede5;
+  --cream-darker: #ebe4d8;
+  --warm-white: #fefbf7;
   --charcoal: #2c2c2c;
   --charcoal-light: #4a4a4a;
   --sage-gray: #6b6b6b;
   --soft-gray: #a8a8a8;
-  --divider-color: #e8e3d8;
+  --divider-color: #e5dfd3;
   --accent-warm: #d4c4a8;
+  --accent-muted: #c4b69a;
   --shadow-editorial: 0 8px 32px rgba(44, 44, 44, 0.08);
   --shadow-soft: 0 4px 16px rgba(44, 44, 44, 0.06);
 
@@ -378,10 +380,6 @@ a:hover {
   box-shadow: var(--shadow-editorial);
 }
 
-.work-item-large {
-  grid-column: span 2;
-}
-
 .work-link {
   display: block;
   height: 100%;
@@ -545,7 +543,7 @@ a:hover {
 /* Testimonials - Editorial Style */
 .testimonials {
   padding: var(--section-padding);
-  background-color: var(--cream-dark);
+  background-color: var(--cream-darker);
 }
 
 .testimonials-grid {
@@ -853,8 +851,8 @@ a:hover {
 
 .project-hero-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
   align-items: center;
   max-width: var(--container-max-width);
   margin: 0 auto;
@@ -879,11 +877,22 @@ a:hover {
   max-width: 600px;
 }
 
+.project-hero-image {
+  text-align: center;
+}
+
+.project-hero-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+}
+
 .project-meta {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
   padding: 2rem 0;
   border-top: 1px solid var(--divider-color);
 }
@@ -892,6 +901,7 @@ a:hover {
   text-align: left;
 }
 
+.meta-item .meta-label,
 .meta-item .label {
   font-family: var(--font-sans);
   font-size: 0.85rem;
@@ -903,10 +913,84 @@ a:hover {
   display: block;
 }
 
+.meta-item .meta-value,
 .meta-item .value {
   color: var(--charcoal);
   font-size: 1rem;
   font-weight: 500;
+}
+
+/* Project Sections */
+.project-section {
+  padding: 4rem 0;
+  background-color: var(--cream-base);
+}
+
+.project-section:nth-child(even) {
+  background-color: var(--warm-white);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.project-grid.reverse {
+  direction: rtl;
+}
+
+.project-grid.reverse > * {
+  direction: ltr;
+}
+
+.project-text h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  margin-bottom: 1.5rem;
+}
+
+.project-text h3 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+}
+
+.project-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--charcoal-light);
+  margin-bottom: 1.5rem;
+}
+
+.project-image {
+  text-align: center;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  border-radius: 0;
+}
+
+/* Single column layouts */
+.project-grid.single-col {
+  grid-template-columns: 1fr;
+  max-width: 800px;
+  text-align: center;
+}
+
+.project-grid.single-col .project-text {
+  text-align: center;
 }
 
 .project-nav {
@@ -1057,7 +1141,13 @@ a:hover {
   }
 
   .project-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
     padding: 0 1.5rem;
+  }
+
+  .project-hero-image {
+    order: -1;
   }
 
   .project-meta {
@@ -1069,6 +1159,16 @@ a:hover {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .project-grid.reverse {
+    direction: ltr;
   }
 
   .gallery-grid-2,
@@ -1088,4 +1188,40 @@ a:hover {
     flex-direction: column;
     align-items: center;
   }
+
+  .project-text h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Back Button for Project Pages */
+.back-to-portfolio {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background: var(--warm-white);
+  border: 1px solid var(--divider-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  z-index: 100;
+  color: var(--charcoal);
+}
+
+.back-to-portfolio:hover {
+  background: var(--charcoal);
+  color: var(--warm-white);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.back-to-portfolio svg {
+  width: 20px;
+  height: 20px;
 }
