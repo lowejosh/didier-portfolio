@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lionheart - Didier Jourdain</title>
+    <meta name="description" content="Lionheart - Brand identity for a company that assists adolescents with learning difficulties, focusing on inclusivity and education.">
+    
+    <!-- Fonts -->
+    <script src="https://use.typekit.net/nzr5sic.js" type="text/javascript"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <link rel="stylesheet" href="css/modern-portfolio.css">
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    
+    <style>
+        /* Project-specific styles */
+        .project-hero {
+            min-height: 90vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+        }
+        
+        .project-hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .project-hero-content h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+        
+        .project-hero-content p {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .meta-label {
+            font-size: 0.9rem;
+            color: #667eea;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .meta-value {
+            font-size: 1rem;
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+        
+        .project-hero-image {
+            text-align: center;
+        }
+        
+        .project-hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-section {
+            padding: 80px 0;
+        }
+        
+        .project-section:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .project-text h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+        
+        .project-text p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-image {
+            text-align: center;
+        }
+        
+        .project-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .back-to-portfolio {
+            position: fixed;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .back-to-portfolio:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .back-to-portfolio svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .project-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .project-cta h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .project-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        @media (min-width: 768px) {
+            .project-hero-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+            
+            .project-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+            
+            .project-grid.reverse {
+                direction: rtl;
+            }
+            
+            .project-grid.reverse > * {
+                direction: ltr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .back-to-portfolio {
+                left: 15px;
+                width: 45px;
+                height: 45px;
+            }
+            
+            .project-meta {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Portfolio Button -->
+    <button class="back-to-portfolio" onclick="window.history.back();" aria-label="Back to portfolio">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+        </svg>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav-main" id="nav-main">
+        <div class="nav-container">
+            <a href="new-index.html" class="nav-logo">
+                <img src="images/Artwork-65.svg" alt="DJ Logo" class="nav-logo-img">
+            </a>
+            
+            <div class="nav-links" id="nav-links">
+                <a href="new-index.html" class="nav-link">Home</a>
+                <a href="new-index.html#work" class="nav-link">Work</a>
+                <a href="new-index.html#about" class="nav-link">About</a>
+                <a href="new-index.html#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-location">
+                <span>Brisbane, AUS</span>
+            </div>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="project-hero-grid">
+            <div class="project-hero-content">
+                <h1>Lionheart</h1>
+                <p>
+                    Brand identity for a company that assists adolescents with learning difficulties. Lionheart is an event for learning about inclusivity from industry leaders, designed for both students and teachers.
+                </p>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Category</span>
+                        <span class="meta-value">Branding & Logo Design</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Year</span>
+                        <span class="meta-value">2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Type</span>
+                        <span class="meta-value">Non-Profit Project</span>
+                    </div>
+                </div>
+                
+                <a href="#project-details" class="btn btn-primary">Explore Project</a>
+            </div>
+            
+            <div class="project-hero-image">
+                <img src="images/Lionheart-banner2x.png" alt="Lionheart Brand Identity" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Background -->
+    <section id="project-details" class="project-section">
+        <div class="container">
+            <div class="project-grid">
+                <div class="project-text">
+                    <h2>Mission & Vision</h2>
+                    <p>
+                        Lionheart was born of a parent not-for-profit organization that assists adolescents with learning difficulties. The organization needed a strong brand identity that would represent their values of courage, strength, and inclusivity.
+                    </p>
+                    <p>
+                        This project was to design a brandmark for Lionheart, as well as other assets that would be needed for the organization to effectively communicate their mission of supporting young people through educational initiatives.
+                    </p>
+                </div>
+                
+                <div class="project-image">
+                    <img src="images/Lionheart-tile.svg" alt="Lionheart Logo Showcase" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brandmark -->
+    <section class="project-section">
+        <div class="container">
+            <div class="project-grid reverse">
+                <div class="project-text">
+                    <h2>Brandmark Design</h2>
+                    <p>
+                        The main requirement for this project was a strong brandmark. The brief stated that it needed to be a combination mark of a pictorial and word mark, as it is more inclusive and easier to identify.
+                    </p>
+                    <p>
+                        The pictorial mark was designed to encompass the brand name in a bold, strong & noble composition to reflect the core values of the organization. The lion symbolizes courage and strength, while the heart represents compassion and care.
+                    </p>
+                </div>
+                
+                <div class="project-image">
+                    <img src="images/Lionheart-BW-no-BG.svg" alt="Lionheart Brandmark" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process -->
+    <section class="project-section">
+        <div class="container">
+            <div class="project-grid">
+                <div class="project-text">
+                    <h2>Design Process</h2>
+                    <p>
+                        First starting with sketches, I quickly drew out some ideas on how to incorporate the lion & the heart together. After giving myself inspiration and a foundation to start from, I ideated several different marks to send to the founder.
+                    </p>
+                    <p>
+                        The process involved multiple iterations, testing different approaches to balance the symbolic elements while maintaining clarity and impact across various applications.
+                    </p>
+                </div>
+                
+                <div class="project-image">
+                    <img src="images/Asset-26.png" alt="Lionheart Design Process" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project CTA -->
+    <section class="project-cta">
+        <div class="container">
+            <h2>Need a Meaningful Brand Identity?</h2>
+            <p>Let's create a brand that truly represents your organization's values and mission</p>
+            <a href="mailto:djourdain44@gmail.com?subject=Branding%20Project%20Inquiry" class="btn contact-button-modern">Start a Project</a>
+        </div>
+    </section>
+
+    <!-- More Projects -->
+    <section class="project-section">
+        <div class="container">
+            <div style="text-align: center;">
+                <h2>More Projects</h2>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+                    <a href="spir-handmade-modern.html" class="btn btn-outline">SPIR Handmade</a>
+                    <a href="gaia-display-modern.html" class="btn btn-outline">Gaia Display</a>
+                    <a href="azuri-handmade-modern.html" class="btn btn-outline">Azuri Handmade</a>
+                    <a href="new-index.html#work" class="btn btn-primary">All Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/DJ-Logo-White.svg" alt="DJ Logo" class="footer-logo-img">
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2025 Didier Jourdain. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/modern-portfolio.js"></script>
+</body>
+</html>

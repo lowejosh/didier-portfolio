@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azuri Handmade - Didier Jourdain</title>
+    <meta name="description" content="Azuri Handmade - Jewelry brand identity embodying craftsmanship, storytelling, and nomadic spirit for handcrafted intuitive jewelry.">
+    
+    <!-- Fonts -->
+    <script src="https://use.typekit.net/nzr5sic.js" type="text/javascript"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <link rel="stylesheet" href="css/modern-portfolio.css">
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    
+    <style>
+        /* Project-specific styles */
+        .project-hero {
+            min-height: 90vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+        }
+        
+        .project-hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .project-hero-content h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+        
+        .project-hero-content p {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .meta-label {
+            font-size: 0.9rem;
+            color: #667eea;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .meta-value {
+            font-size: 1rem;
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+        
+        .project-hero-image {
+            text-align: center;
+        }
+        
+        .project-hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-section {
+            padding: 80px 0;
+        }
+        
+        .project-section:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .project-text h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+        
+        .project-text p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-image {
+            text-align: center;
+        }
+        
+        .project-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .back-to-portfolio {
+            position: fixed;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .back-to-portfolio:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .back-to-portfolio svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .project-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .project-cta h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .project-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .full-width-image {
+            width: 100%;
+            max-width: none;
+            margin: 0 -20px;
+        }
+        
+        @media (min-width: 768px) {
+            .project-hero-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+            
+            .project-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+            
+            .project-grid.reverse {
+                direction: rtl;
+            }
+            
+            .project-grid.reverse > * {
+                direction: ltr;
+            }
+            
+            .full-width-image {
+                margin: 0 -50px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .back-to-portfolio {
+                left: 15px;
+                width: 45px;
+                height: 45px;
+            }
+            
+            .project-meta {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Portfolio Button -->
+    <button class="back-to-portfolio" onclick="window.history.back();" aria-label="Back to portfolio">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+        </svg>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav-main" id="nav-main">
+        <div class="nav-container">
+            <a href="new-index.html" class="nav-logo">
+                <img src="images/Artwork-65.svg" alt="DJ Logo" class="nav-logo-img">
+            </a>
+            
+            <div class="nav-links" id="nav-links">
+                <a href="new-index.html" class="nav-link">Home</a>
+                <a href="new-index.html#work" class="nav-link">Work</a>
+                <a href="new-index.html#about" class="nav-link">About</a>
+                <a href="new-index.html#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-location">
+                <span>Brisbane, AUS</span>
+            </div>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="project-hero-grid">
+            <div class="project-hero-content">
+                <h1>Azuri Handmade</h1>
+                <p>
+                    Jewelry brand identity embodying craftsmanship, storytelling, and nomadic spirit. A startup small business creating handcrafted intuitive jewelry with deep meaning and connection.
+                </p>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Category</span>
+                        <span class="meta-value">Branding & Identity</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Year</span>
+                        <span class="meta-value">2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Type</span>
+                        <span class="meta-value">Startup Branding</span>
+                    </div>
+                </div>
+                
+                <a href="#project-details" class="btn btn-primary">Explore Project</a>
+            </div>
+            
+            <div class="project-hero-image">
+                <img src="images/Azuri-Tile.svg" alt="Azuri Handmade Brand Identity" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Banner -->
+    <section class="project-section">
+        <div class="container">
+            <div class="project-image">
+                <img src="images/Azuri-Banner.svg" alt="Azuri Handmade Brand Banner" loading="lazy" class="full-width-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Brandmark -->
+    <section id="project-details" class="project-section">
+        <div class="container">
+            <div class="project-grid">
+                <div class="project-text">
+                    <h2>Brandmark Philosophy</h2>
+                    <p>
+                        Azuri's mission is to show us all what it is to be human. The wordmark is designed to evoke a feeling of wonder, connection, and unity, offering a reminder that humans are not separate from the universe but are a direct manifestation of its consciousness.
+                    </p>
+                    <p>
+                        In essence, this logo serves as a symbolic reflection of the idea that we are the universe becoming aware of itself—a visual invitation to contemplate our place in the grand expanse of existence.
+                    </p>
+                </div>
+                
+                <div class="project-image">
+                    <img src="images/Azuri-Logo-iterations.svg" alt="Azuri Logo Design Iterations" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo & Colors -->
+    <section class="project-section">
+        <div class="container">
+            <div class="project-grid reverse">
+                <div class="project-text">
+                    <h2>Colors & Applications</h2>
+                    <p>
+                        As the product is an intuitive process, the color scheme reflects that by having many different colors, too many to showcase. The only defining factor for the color palette is that they need to be pastel colors.
+                    </p>
+                    <p>
+                        This way there is a loose theme and feeling between the brand and the colors. Pastel colors also have a handmade and earthy feel to them, further reflecting the brand's artisanal nature and connection to natural materials.
+                    </p>
+                </div>
+                
+                <div class="project-image">
+                    <img src="images/Azuri-Logo-and-colours.svg" alt="Azuri Logo and Color Palette" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minimalist Logo -->
+    <section class="project-section">
+        <div class="container">
+            <div class="project-grid">
+                <div class="project-text">
+                    <h2>Simplified Applications</h2>
+                    <p>
+                        For smaller applications and digital use, a simplified version of the logo was created. This maintains the brand's essence while ensuring readability and impact across all touchpoints.
+                    </p>
+                </div>
+                
+                <div class="project-image">
+                    <img src="images/Azuri-min.svg" alt="Azuri Minimalist Logo" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thank You Card -->
+    <section class="project-section">
+        <div class="container">
+            <div class="project-grid reverse">
+                <div class="project-text">
+                    <h2>Thank You Card Design</h2>
+                    <p>
+                        This design was chosen to sit on the back of the thank you card. The card represents the personal touch and craftsmanship that Azuri brings to every piece of jewelry.
+                    </p>
+                    <p>
+                        Each card accompanies handmade jewelry pieces, creating a meaningful connection between the artisan and the customer, reinforcing the brand's values of storytelling and human connection.
+                    </p>
+                </div>
+                
+                <div class="project-image">
+                    <img src="images/Azury-card.svg" alt="Azuri Thank You Card Design" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Graphic Assets -->
+    <section class="project-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2>Graphic Assets</h2>
+                <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">
+                    A comprehensive suite of graphic elements was developed to support the brand across various applications and communications.
+                </p>
+            </div>
+            <div class="project-image">
+                <img src="images/Azuri-graphics-banner.svg" alt="Azuri Graphic Assets" loading="lazy" class="full-width-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project CTA -->
+    <section class="project-cta">
+        <div class="container">
+            <h2>Ready to Build Your Brand Story?</h2>
+            <p>Let's create a meaningful identity that connects with your audience on a deeper level</p>
+            <a href="mailto:djourdain44@gmail.com?subject=Brand%20Identity%20Project%20Inquiry" class="btn contact-button-modern">Start a Project</a>
+        </div>
+    </section>
+
+    <!-- More Projects -->
+    <section class="project-section">
+        <div class="container">
+            <div style="text-align: center;">
+                <h2>More Projects</h2>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+                    <a href="spir-handmade-modern.html" class="btn btn-outline">SPIR Handmade</a>
+                    <a href="gaia-display-modern.html" class="btn btn-outline">Gaia Display</a>
+                    <a href="lionheart-modern.html" class="btn btn-outline">Lionheart</a>
+                    <a href="new-index.html#work" class="btn btn-primary">All Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/DJ-Logo-White.svg" alt="DJ Logo" class="footer-logo-img">
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2025 Didier Jourdain. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/modern-portfolio.js"></script>
+</body>
+</html>

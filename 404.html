@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Didier Jourdain</title>
+    <meta name="description" content="Page not found - Visual designer & illustrator based in Brisbane, Australia.">
+    
+    <!-- Fonts -->
+    <script src="https://use.typekit.net/nzr5sic.js" type="text/javascript"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <link rel="stylesheet" href="css/modern-portfolio.css">
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .error-content {
+            max-width: 500px;
+        }
+        
+        .error-number {
+            font-size: 8rem;
+            font-weight: 700;
+            color: #667eea;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        
+        .error-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+        
+        .error-description {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 480px) {
+            .error-number {
+                font-size: 5rem;
+            }
+            
+            .error-title {
+                font-size: 2rem;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div class="error-content">
+            <div class="error-number">404</div>
+            <h1 class="error-title">Page Not Found</h1>
+            <p class="error-description">
+                Oops! The page you're looking for seems to have wandered off. 
+                Let's get you back to exploring my work.
+            </p>
+            <div class="error-actions">
+                <a href="new-index.html" class="btn btn-primary">Go Home</a>
+                <a href="my-works-home.html" class="btn btn-secondary">View Portfolio</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
