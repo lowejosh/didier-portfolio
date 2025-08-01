@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="546.419" height="284.48" viewBox="0 0 546.419 284.48">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="1.435" gradientTransform="translate(0.24) scale(0.521 1)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff4dd"/>
+      <stop offset="0.344" stop-color="#fdf2db"/>
+      <stop offset="0.468" stop-color="#f7ebd4"/>
+      <stop offset="0.557" stop-color="#ece0c8"/>
+      <stop offset="0.628" stop-color="#ddd1b7"/>
+      <stop offset="0.649" stop-color="#d7cbb1"/>
+    </radialGradient>
+  </defs>
+  <g id="Artwork_82" data-name="Artwork 82" transform="translate(273.209 142.24)">
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="546.419" height="284.48" transform="translate(-273.209 -142.24)" fill="url(#radial-gradient)"/>
+  </g>
+</svg>

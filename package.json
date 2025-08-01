@@ -1,0 +1,22 @@
+{
+  "name": "didier-jourdain-portfolio",
+  "version": "1.0.0",
+  "description": "Didier Jourdain Portfolio Website with Hot Reloading",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --host=localhost --open=/index.html --watch=.",
+    "start": "live-server --port=3000 --host=localhost --open=/index.html",
+    "serve": "python3 -m http.server 8000"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "keywords": [
+    "portfolio",
+    "static-website",
+    "webflow",
+    "hot-reload"
+  ],
+  "author": "Didier Jourdain",
+  "license": "MIT"
+}
