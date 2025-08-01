@@ -1,124 +1,146 @@
-# Didier Jourdain Portfolio - Development Setup
+# Didier Jourdain - Modern Portfolio Website
 
-This portfolio website now includes hot reloading functionality for efficient development.
+A completely redesigned, modern, mobile-first portfolio website for visual designer & illustrator Didier Jourdain.
 
-## 🚀 Quick Start
+## 🎨 Features
+
+### Design
+- **Mobile-First Responsive Design** - Optimized for all screen sizes
+- **Modern Clean Layout** - Minimalist design with beautiful typography
+- **Smooth Animations** - Subtle animations and micro-interactions
+- **Accessibility First** - High contrast support, keyboard navigation, screen reader friendly
+- **Performance Optimized** - Fast loading, lazy loading images, optimized assets
+
+### Sections
+- **Hero Section** - Eye-catching introduction with call-to-actions
+- **Featured Work** - Curated portfolio projects with hover effects
+- **About Section** - Personal story and skills showcase
+- **Testimonials** - Client feedback in elegant card layout
+- **Contact Section** - Easy-to-find contact information and social links
+
+### Technical Features
+- **Vanilla JavaScript** - No framework dependencies for faster loading
+- **CSS Grid & Flexbox** - Modern layout techniques
+- **Intersection Observer** - Efficient scroll animations
+- **Progressive Enhancement** - Works without JavaScript
+- **SEO Optimized** - Proper meta tags and semantic HTML
+
+## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v14 or higher)
-- npm (comes with Node.js)
+- Node.js (for development server)
+- Modern web browser
 
 ### Installation
-```bash
-npm install
+1. Clone or download the repository
+2. Navigate to the project directory
+3. Install dependencies: `npm install`
+4. Start development server: `npm run dev`
+5. Open `http://localhost:3000/new-index.html` in your browser
+
+### File Structure
+```
+├── new-index.html              # Main modern portfolio page
+├── css/
+│   └── modern-portfolio.css    # Modern styling (mobile-first)
+├── js/
+│   └── modern-portfolio.js     # Interactive functionality
+├── images/                     # All image assets
+├── backup-original/            # Backup of original files
+└── README-modern.md           # This file
 ```
 
-### Development Server with Hot Reloading
-```bash
-npm run dev
-```
+## 🎯 Key Improvements Over Original
 
-This will:
-- Start a development server on `http://localhost:3000`
-- Automatically open your browser
-- Watch for changes in HTML, CSS, JS, and image files
-- Automatically refresh the browser when files change
+### Design
+- **Cleaner Layout** - Better visual hierarchy and spacing
+- **Modern Typography** - Improved readability and visual appeal
+- **Consistent Branding** - Cohesive color scheme and design language
+- **Better Mobile Experience** - Touch-friendly, optimized for small screens
 
-## 📝 Available Scripts
+### Performance
+- **Faster Loading** - Optimized CSS and JavaScript
+- **Lazy Loading** - Images load as needed
+- **Smooth Scrolling** - Better user experience
+- **Reduced Bounce Rate** - More engaging interactions
 
-### `npm run dev`
-Starts the development server with hot reloading using our custom configuration.
+### User Experience
+- **Intuitive Navigation** - Clear menu structure
+- **Improved Accessibility** - Screen reader support, keyboard navigation
+- **Better Content Structure** - Logical flow and easy scanning
+- **Clear Call-to-Actions** - Prominent contact options
 
-### `npm run simple`
-Starts a simple live-server with basic hot reloading.
+## 🛠️ Customization
 
-### `npm start`
-Starts the live-server without automatic file watching.
+### Colors
+The main brand colors can be updated in the CSS file:
+- Primary: `#667eea` (Purple-blue gradient start)
+- Secondary: `#764ba2` (Purple-blue gradient end)
+- Text: `#1a1a1a` (Dark gray)
+- Background: `#ffffff` (White)
 
-### `npm run serve`
-Starts a basic Python HTTP server on port 8000 (no hot reloading).
+### Fonts
+Currently using Adobe Typekit's Proxima Nova. To change:
+1. Update the font loading in the HTML `<head>`
+2. Modify the `font-family` in CSS
 
-## 🔥 Hot Reloading Features
+### Content
+- Update content directly in `new-index.html`
+- Replace images in the `/images` folder
+- Modify project links to point to individual project pages
 
-- **Instant Updates**: Changes to HTML, CSS, and JS files trigger automatic browser refresh
-- **Asset Watching**: Images, SVGs, and other assets are also monitored
-- **Fast Refresh**: Minimal delay between saving a file and seeing changes
-- **Console Logging**: See requests and file changes in the terminal
-- **Cross-Platform**: Works on macOS, Windows, and Linux
+## 📱 Browser Support
 
-## 📁 Project Structure
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
-```
-didier-jourdain-portfolio.webflow/
-├── index.html              # Main homepage
-├── about-me.html           # About page
-├── contact-me.html         # Contact page
-├── my-works-home.html      # Works overview
-├── css/                    # Stylesheets
-│   ├── didier-jourdain-portfolio.webflow.css
-│   ├── normalize.css
-│   └── webflow.css
-├── js/                     # JavaScript files
-│   └── webflow.js
-├── images/                 # Images and assets
-├── documents/              # Documents (JSON, etc.)
-├── package.json            # Node.js dependencies
-├── dev-server.js          # Custom development server
-└── .env                   # Environment configuration
-```
+## 🔧 Development
 
-## 🛠️ Development Workflow
+### Adding New Projects
+1. Add project images to `/images` folder
+2. Create new project HTML file (follow existing pattern)
+3. Add project card to the work grid in `new-index.html`
+4. Update navigation if needed
 
-1. **Start Development**: Run `npm run dev`
-2. **Edit Files**: Make changes to any HTML, CSS, or JS files
-3. **See Changes**: Browser automatically refreshes with your changes
-4. **Debug**: Check the terminal for any errors or logs
+### Modifying Animations
+All animations are controlled via CSS and JavaScript:
+- CSS animations in `modern-portfolio.css`
+- JavaScript interactions in `modern-portfolio.js`
+- Respect `prefers-reduced-motion` for accessibility
 
-## 🎨 Making Changes
+## 📋 TODO / Future Enhancements
 
-### HTML Files
-Edit any `.html` file and save - the browser will automatically refresh.
+- [ ] Add project filtering functionality
+- [ ] Implement dark mode toggle
+- [ ] Add blog section
+- [ ] Create individual project detail pages
+- [ ] Add contact form with backend integration
+- [ ] Implement PWA features
+- [ ] Add more micro-interactions
 
-### CSS Styles
-Modify files in the `css/` directory:
-- `didier-jourdain-portfolio.webflow.css` - Main stylesheet
-- `webflow.css` - Webflow framework styles
-- `normalize.css` - CSS reset/normalize
+## 🤝 Contributing
 
-### JavaScript
-Edit `js/webflow.js` or add new JavaScript files.
+This is a personal portfolio website. For suggestions or improvements:
+1. Create an issue describing the enhancement
+2. Fork the repository
+3. Make your changes
+4. Submit a pull request
 
-### Images and Assets
-Add or replace files in the `images/` directory.
+## 📄 License
 
-## 🚫 Troubleshooting
+This project is for portfolio purposes. Please respect the design and content ownership.
 
-### Port Already in Use
-If port 3000 is busy, the server will automatically find the next available port.
+## 📞 Contact
 
-### Browser Not Opening
-Manually navigate to `http://localhost:3000` if the browser doesn't open automatically.
-
-### Changes Not Reloading
-- Check that files are saved
-- Ensure you're editing files in the correct directory
-- Restart the development server with `Ctrl+C` then `npm run dev`
-
-### Cache Issues
-If you see old content, try:
-- Hard refresh: `Ctrl+Shift+R` (Windows/Linux) or `Cmd+Shift+R` (Mac)
-- Clear browser cache
-- Restart the development server
-
-## 📦 Dependencies
-
-- **live-server**: Provides the hot reloading functionality
-- **Node.js**: Runtime for the development server
-
-## 🌐 Production Deployment
-
-For production, you can simply upload the HTML, CSS, JS, and image files to any web server. The hot reloading setup is only for development and won't affect your production site.
+**Didier Jourdain**
+- Email: djourdain44@gmail.com
+- Location: Brisbane, Australia
+- Instagram: [@didier_j_designs](https://www.instagram.com/didier_j_designs/)
+- LinkedIn: [Didier Jourdain](https://www.linkedin.com/in/didier-jourdain-492051250)
 
 ---
 
-Happy coding! 🎨✨
+*Built with ❤️ using modern web technologies*
