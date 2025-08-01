@@ -4,9 +4,10 @@
   "description": "Didier Jourdain Portfolio Website with Hot Reloading",
   "main": "index.html",
   "scripts": {
-    "dev": "live-server --port=3000 --host=localhost --open=/index.html --watch=.",
+    "dev": "node dev-server.js",
     "start": "live-server --port=3000 --host=localhost --open=/index.html",
-    "serve": "python3 -m http.server 8000"
+    "serve": "python3 -m http.server 8000",
+    "simple": "live-server --port=3000 --host=localhost --open=/index.html --watch=."
   },
   "devDependencies": {
     "live-server": "^1.2.2"
