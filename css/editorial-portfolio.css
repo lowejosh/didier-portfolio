@@ -677,6 +677,23 @@ a:hover {
   border-color: var(--warm-white);
 }
 
+/* Legacy button styling for project pages */
+.project-cta .contact-button-modern,
+.project-cta .btn {
+  background-color: var(--warm-white);
+  color: var(--charcoal);
+  border-color: var(--warm-white);
+  font-size: 1rem;
+  padding: 1.2rem 3rem;
+}
+
+.project-cta .contact-button-modern:hover,
+.project-cta .btn:hover {
+  background-color: transparent;
+  color: var(--warm-white);
+  border-color: var(--warm-white);
+}
+
 /* Footer - Editorial Minimal */
 .footer {
   background-color: var(--charcoal);
@@ -1127,11 +1144,50 @@ a:hover {
   margin-right: auto;
 }
 
+/* Legacy CTA section styling for project pages */
 .project-cta {
+  background-color: var(--charcoal);
+  padding: 4rem 0;
+  text-align: center;
+  color: var(--warm-white);
+}
+
+.project-cta h2 {
+  color: var(--warm-white);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.project-cta p {
+  color: var(--soft-gray);
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Button container within project sections */
+.project-cta-buttons,
+.project-footer .project-cta {
   display: inline-flex;
   gap: 1.5rem;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+/* More Projects section styling */
+.project-section h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.project-section .btn {
+  margin: 0.5rem;
 }
 
 /* Project Page Responsive Design */
